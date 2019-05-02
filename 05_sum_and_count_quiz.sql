@@ -1,16 +1,16 @@
-I. Select the statement that shows the sum of population of all countries in 'Europe'
+-- I. Select the statement that shows the sum of population of all countries in 'Europe'
 
 SELECT SUM(population) FROM bbc WHERE region = 'Europe'
 
-II. Select the statement that shows the number of countries with population smaller than 150000
+-- II. Select the statement that shows the number of countries with population smaller than 150000
 
 SELECT COUNT(name) FROM bbc WHERE population < 150000
 
-III. Select the list of core SQL aggregate functions
+-- III. Select the list of core SQL aggregate functions
 
 AVG(), COUNT(), MAX(), MIN(), SUM()
 
-IV. Select the result that would be obtained from the following code:
+-- IV. Select the result that would be obtained from the following code:
 
 SELECT region, SUM(area)
     FROM bbc
@@ -19,19 +19,19 @@ SELECT region, SUM(area)
 
 No result due to invalid use of the WHERE function
 
-V. Select the statement that shows the average population of 'Poland', 'Germany' and 'Denmark'
+-- V. Select the statement that shows the average population of 'Poland', 'Germany' and 'Denmark'
 
 SELECT AVG(population) FROM bbc WHERE name IN ('Poland', 'Germany', 'Denmark')
 
-VI. Select the statement that shows the medium population density of each region
+-- VI. Select the statement that shows the medium population density of each region
 
 SELECT region, SUM(population)/SUM(area) AS density FROM bbc GROUP BY region
 
-VII. Select the statement that shows the name and population density of the country with the largest population
+-- VII. Select the statement that shows the name and population density of the country with the largest population
 
 SELECT name, population/area AS density FROM bbc WHERE population = (SELECT MAX(population) FROM bbc)
 
-VIII. Pick the result that would be obtained from the following code:
+-- VIII. Pick the result that would be obtained from the following code:
 
 SELECT region, SUM(area)
     FROM bbc
@@ -43,4 +43,3 @@ Americas	    732240
 Middle East	  13403102
 South America	17740392
 South Asia	  9437710
-
